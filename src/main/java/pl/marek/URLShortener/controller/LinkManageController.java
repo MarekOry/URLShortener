@@ -2,22 +2,20 @@ package pl.marek.URLShortener.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.marek.URLShortener.dto.CreateLinkDto;
 import pl.marek.URLShortener.dto.LinkDto;
+import pl.marek.URLShortener.link.LinkAlreadyExistsException;
 import pl.marek.URLShortener.link.LinkService;
 
 @RestController
-@RequestMapping("/links/")
+@RequestMapping("/links")
 @AllArgsConstructor
 public class LinkManageController {
 
     private final LinkService linkService;
 
-    /**
-     * @param link parameter is linkDto
-     * @return
-     */
     @PostMapping()
     @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
