@@ -11,8 +11,13 @@ import pl.marek.URLShortener.link.LinkService;
 @RequestMapping("/links/")
 @AllArgsConstructor
 public class LinkManageController {
+
     private final LinkService linkService;
 
+    /**
+     * @param link parameter is linkDto
+     * @return
+     */
     @PostMapping()
     @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
