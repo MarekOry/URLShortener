@@ -1,6 +1,5 @@
 package pl.marek.URLShortener.controller;
 
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import pl.marek.URLShortener.dto.LinkDto;
 import pl.marek.URLShortener.link.LinkService;
 
-import java.io.IOException;
 import java.net.URI;
 
 @RestController
